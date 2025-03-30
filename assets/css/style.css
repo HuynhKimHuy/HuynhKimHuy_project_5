@@ -216,6 +216,7 @@ a {
     justify-content: center;
 }
 .phone-inner {
+    width: 100%;
     margin-top: 29px;
     padding: 23px;
 }
@@ -290,28 +291,159 @@ a {
     display: flex;
     align-items: center;
 }
-.phone__item-img {
+
+.phone__body-content {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.body__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 28px;
+}
+.body__item-content {
+    width: 100%;
+}
+.body__item-head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.body__item-desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.body__item-img {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
-    border-radius: 8px;
     flex-shrink: 0;
-    z-index: -1;
-    background-color: #4ab5e3;
-    opacity: 10%;
+    border-radius: 8px;
+    z-index: 1; /* Sink down */
+}
+.body__item-img::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #4ab5e3;
+    opacity: 0.1;
+    border-radius: 8px;
 }
 .item-img {
-    width: 100%;
-    z-index: 1;
+    display: block;
+    z-index: 2; /* Float up */
 }
-.phone__price {
-    margin-left: 14px;
+.body__item:nth-child(2) .body__item-img::before {
+    background: #da6464;
 }
-.phone__item-money {
+.body__item:nth-child(3) .body__item-img::before {
+    background: #439f90;
+}
+.body__item:nth-child(3) .body__item-img::before {
+    background: #7264d6;
+}
+.body__item-head,
+.body__item-desc {
+    padding-left: 14px;
+}
+.body__item-head {
     color: #212832;
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 1; /* 100% */
+}
+.body__item-desc {
+    margin-top: 6px;
+    color: #696d76;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1; /* 100% */
+}
+.phone___body-desposite {
+    width: 174px;
+    height: 46px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 6px;
+    left: -100px;
+    top: 113px;
+}
+.phone__desposite {
+    display: flex;
+    padding: 16px 10px;
+}
+.phone__desponsite-desc {
+    margin-left: 8px;
+    color: #31456a;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1; /* 100% */
+}
+.phone__desponsite-price {
+    margin-left: 19px;
+    color: #4ab5e3;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1; /* 100% */
+}
+.phone__security {
+    top: 433px;
+    right: -74px;
+    background: #439f90;
+    position: absolute;
+    border-radius: 10px;
+    width: 124px;
+    height: 68px;
+}
+.security__inner {
+    display: flex;
+    padding: 20px 15px;
+}
+.security__desc {
+    padding-left: 11px;
+}
+.security-price {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1; /* 100% */
+}
+.security-funds {
+    margin-top: 5px;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1; /* 100% */
+}
+.phone__interest {
+    top: 127px;
+    right: 0;
+    transform: translateX(calc(100% + 44px));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #da6464;
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+.interest-number {
+    color: #fff;
+    font-size: 4.4rem;
+    font-weight: 600;
+}
+.interest-desc {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 400;
 }
