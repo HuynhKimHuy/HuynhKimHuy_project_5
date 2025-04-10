@@ -447,3 +447,59 @@ a {
     font-size: 1.6rem;
     font-weight: 400;
 }
+
+/* how it work  */
+.work {
+    margin-top: 160px;
+}
+.work__content-left {
+    width: 40.17%;
+    position: relative;
+}
+
+.img-left {
+    padding: 0 7px;
+    width: 100%;
+}
+
+.work__let-img::before {
+    position: absolute;
+    display: block;
+    content: url(../icon/work-img-content.svg);
+    bottom: 0;
+    z-index: -1;
+    width: 470px;
+    height: 550px;
+}
+.work__left-decoration {
+    position: absolute;
+    right: 62px;
+    top: 76px;
+}
+.work__congratulations {
+    position: absolute;
+    background: #fff;
+    top: 453px;
+    right: -100px;
+    border-radius: 8px;
+    width: 226px;
+    height: 70px;
+    padding: 16px 15px;
+}
+
+.congratulations__inner {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.congra {
+    color: #212832;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.congration__desc {
+    color: #696d76;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 5px;
+}
